@@ -2,7 +2,7 @@
 
 This project deploys as two Vercel projects:
 
-- Frontend: `frontend+` -> `https://www.myboverse.com`
+- Frontend: `frontend+` -> `https://zhixuanyoufa.myboverse.com`
 - Backend: `backend` -> `https://api.myboverse.com`
 
 ## Supabase
@@ -77,7 +77,7 @@ VITE_USE_MOCK=false
 Production domain:
 
 ```text
-www.myboverse.com
+zhixuanyoufa.myboverse.com
 ```
 
 ## Cloudflare DNS
@@ -87,19 +87,17 @@ The domain is registered at Spaceship and delegates authoritative DNS to Cloudfl
 Expected records:
 
 ```text
-@    A      216.198.79.1
-@    A      64.29.17.1
-www  CNAME  2345281f0f0668cc.vercel-dns-017.com
-api  CNAME  41d8569592051bf5.vercel-dns-017.com
+zhixuanyoufa  CNAME  <Vercel-provided-DNS-target>
+api           CNAME  41d8569592051bf5.vercel-dns-017.com
 ```
 
 Use the exact Vercel-provided DNS target if Vercel shows a different verification record.
 
-Keep all four records in DNS-only mode until Vercel reports a valid configuration and issues certificates. Configure `myboverse.com` in Vercel as a permanent redirect to `www.myboverse.com`.
+Keep the records in DNS-only mode until Vercel reports a valid configuration and issues certificates. If the apex domain is still configured, set `myboverse.com` in Vercel as a permanent redirect to `zhixuanyoufa.myboverse.com`.
 
 ## Final Verification
 
-1. Visit `https://www.myboverse.com` and confirm `https://myboverse.com` redirects to it.
+1. Visit `https://zhixuanyoufa.myboverse.com` and, if configured, confirm `https://myboverse.com` redirects to it.
 2. Refresh `/login`, `/dashboard`, and `/reports`; Vercel should serve the SPA fallback.
 3. Log in or register; browser network calls should target `https://api.myboverse.com/api`.
 4. Create a task, run detection, generate a report.

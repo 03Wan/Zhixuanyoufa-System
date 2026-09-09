@@ -6,8 +6,7 @@ import { PrismaExceptionFilter } from './common/filters/prisma-exception.filter'
 import helmet from 'helmet';
 
 const allowedOrigins = new Set([
-  'https://www.myboverse.com',
-  'https://myboverse.com',
+  'https://zhixuanyoufa.myboverse.com',
   'http://localhost:5073',
   'http://127.0.0.1:5073',
 ]);

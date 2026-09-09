@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.myboverse.com/sitemap.xml
+Sitemap: https://zhixuanyoufa.myboverse.com/sitemap.xml
