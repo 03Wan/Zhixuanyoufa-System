@@ -6,9 +6,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: frontend+
     env:
       VERCEL_ORG_ID: team_NG0SEWvPuSD86QOsmKPoB1gh
       VERCEL_PROJECT_ID: prj_qaQXEAIVHPvj9tEAtwGslK5qV1B2
